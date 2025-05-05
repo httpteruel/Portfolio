@@ -1,0 +1,20 @@
+# Portfólio - Arthur Teruel
+
+Bem-vindo ao meu portfólio pessoal! Sou Arthur Teruel, estudante do 5º período de Engenharia de Software no IFPR - Campus Paranavaí, apaixonado por desenvolvimento Full Stack. Este projeto apresenta minhas habilidades em HTML, CSS, JavaScript, Python e PHP, com uma interface moderna e interativa.
+
+## Recursos
+- **Design Responsivo**: Interface elegante com suporte a temas light e dark, adaptável a diferentes dispositivos.
+- **Multilíngue**: Tradução dinâmica entre português (PT) e inglês (EN).
+- **Integração com API**: Exibe citações inspiradoras aleatórias usando a Quotable API, com fallback offline.
+- **Projetos em Destaque**: Seção com projetos como Weather App, Image Slider e Java Grades Analyzer, demonstrando competências em front-end, back-end e design.
+- **Formulário de Contato**: Integração com WhatsApp para envio de mensagens diretamente do site.
+
+## Tecnologias Utilizadas
+- **Front-end**: HTML5, CSS3, JavaScript (ES6)
+- **API**: Quotable API para citações dinâmicas
+- **Ferramentas**: Git, GitHub, VS Code
+
+## Como Executar
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/httpteruel/portfolio.git
