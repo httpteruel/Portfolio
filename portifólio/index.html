@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title data-translate="title">Portfolio</title>
+</head>
+<body>
+    <div class="efeito" aria-hidden="true"></div>
+    <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+    <header>
+        <nav class="navegacao" role="navigation" aria-label="Menu principal">
+            <ul class="menu">
+                <li>
+                    <button class="theme-button" id="temaBotao" aria-label="Alternar tema claro/escuro">Dark</button>
+                </li>
+                <li>
+                    <button class="lang-button" id="langBotao" data-lang="en" aria-label="Alternar idioma para inglês">EN</button>
+                </li>
+                <li>
+                    <a href="#inicio" class="menu-link" data-translate="nav-home">Início</a>
+                </li>
+                <li>
+                    <a href="#sobre" class="menu-link" data-translate="nav-about">Sobre</a>
+                </li>
+                <li>
+                    <a href="#projetos" class="menu-link" data-translate="nav-projects">Projetos</a>
+                </li>
+                <li>
+                    <a href="#contato" class="menu-link" data-translate="nav-contact">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="inicio" class="cabecalho" role="main" id="main-content">
+        <a href="https://github.com/httpteruel" target="_blank"><img src="imagens/profile.jpg" class="foto-perfil" alt="Foto de perfil de Arthur Teruel"></a>
+        <h1>Arthur Teruel</h1>
+        <p class="cabecalho-subtitulo" data-translate="header-subtitle">Desenvolvedor FullStack</p>
+    </main>
+    <section id="sobre" aria-labelledby="sobre-titulo">
+        <h2 class="sobre-titulo" id="sobre-titulo" data-translate="about-title">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p data-translate="about-text">Olá! Meu nome é Arthur Teruel e sou graduando do 5º período de Engenharia de Software no IFPR - Campus Paranavaí. Tenho interesse na atuação Full Stack e possuo experiência com algumas linguagens de programação, incluindo HTML, CSS, JavaScript, Python e PHP</p>
+        </div>
+    </section>
+    <section id="projetos" class="projetos" aria-labelledby="projetos-titulo">
+        <h2 class="projetos-titulo" id="projetos-titulo" data-translate="projects-title">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <article class="projetos-card" aria-labelledby="project1-title">
+                <img src="imagens/dark-theme.png" alt="Captura de tela do projeto Theme-Switcher" class="projetos-imagem">
+                <div class="caixa-texto">
+                    <h3 class="projeto-info" id="project1-title">Basic Web Theme-Switcher</h3>
+                    <p class="projeto-paragrafo" data-translate="project1-desc">Alternador de temas para páginas web</p>
+                </div>
+            </article>
+            <article class="projetos-card" aria-labelledby="project2-title">
+                <img src="imagens/flower.png" alt="Captura de tela da animação de flor em CSS" class="projetos-imagem">
+                <div class="caixa-texto">
+                    <h3 class="projeto-info" id="project2-title">CSS Flower Animation</h3>
+                    <p class="projeto-paragrafo" data-translate="project2-desc">Animação de uma flor criada inteiramente com CSS, sem o uso de JavaScript ou bibliotecas externas</p>
+                </div>
+            </article>
+            <article class="projetos-card" aria-labelledby="project3-title">
+                <img src="imagens/weather.png" alt="Captura de tela do aplicativo Weather App" class="projetos-imagem">
+                <div class="caixa-texto">
+                    <h3 class="projeto-info" id="project3-title">Weather App</h3>
+                    <p class="projeto-paragrafo" data-translate="project3-desc">Este repositório contém um Weather App simples e responsivo, desenvolvido com HTML, CSS e JavaScript. O aplicativo permite consultar a previsão do tempo de qualquer cidade, exibindo informações como temperatura, umidade, vento e condições climáticas atuais</p>
+                </div>
+            </article>
+            <article class="projetos-card" aria-labelledby="project4-title">
+                <img src="imagens/clinica-mulher.png" alt="Captura de tela do site Clinica da Mulher" class="projetos-imagem">
+                <div class="caixa-texto">
+                    <h3 class="projeto-info" id="project4-title">Clinica da Mulher</h3>
+                    <p class="projeto-paragrafo" data-translate="project4-desc">Website responsivo para uma clínica genérica, utilizando HTML e CSS. Desenvolvido em comemoração ao Dia Internacional da Mulher (08 de março)</p>
+                </div>
+            </article>
+            <article class="projetos-card" aria-labelledby="project5-title">
+                <img src="imagens/image-slider.jpeg" alt="Captura de tela do Image Slider" class="projetos-imagem">
+                <div class="caixa-texto">
+                    <h3 class="projeto-info" id="project5-title">Image Slider</h3>
+                    <p class="projeto-paragrafo" data-translate="project5-desc">Image Slider simples desenvolvido com HTML, CSS e JavaScript. Permite a navegação entre imagens de forma manual e automática, com transições suaves</p>
+                </div>
+            </article>
+            <article class="projetos-card" aria-labelledby="project6-title">
+                <img src="imagens/freshpop.png" alt="Captura de tela do site FreshPop" class="projetos-imagem">
+                <div class="caixa-texto">
+                    <h3 class="projeto-info" id="project6-title">FreshPop - Página Web para Propaganda de Refrigerantes</h3>
+                    <p class="projeto-paragrafo" data-translate="project6-desc">Uma página web de propaganda de refrigerantes desenvolvida com HTML, CSS & JavaScript</p>
+                </div>
+            </article>
+            <article class="projetos-card" aria-labelledby="project7-title">
+                <img src="imagens/chart-pie.jpeg" alt="Captura de tela do Graph Generator" class="projetos-imagem">
+                <div class="caixa-texto">
+                    <h3 class="projeto-info" id="project7-title">Graph Generator</h3>
+                    <p class="projeto-paragrafo" data-translate="project7-desc">Aplicação Java para construção de gráficos de diversos tipos</p>
+                </div>
+            </article>
+            <article class="projetos-card" aria-labelledby="project8-title">
+                <img src="imagens/code.jpg" alt="Captura de tela do Java Grades Analyzer" class="projetos-imagem">
+                <div class="caixa-texto">
+                    <h3 class="projeto-info" id="project8-title">Java Grades Analyzer</h3>
+                    <p class="projeto-paragrafo" data-translate="project8-desc">Aplicação Java para calcular e ordenar as notas de alunos, com funcionalidade de aprovação/reprovação ajustável de acordo com parâmetros configuráveis</p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="quote-section" aria-live="polite" aria-labelledby="quote-text">
+        <p id="quote-text" data-translate="quote-loading">"Carregando citação..."</p>
+        <p id="quote-author"></p>
+    </section>
+    <section id="contato" class="contato" aria-labelledby="contato-titulo">
+        <h2 class="contato-titulo" id="contato-titulo" data-translate="contact-title">Entre em Contato</h2>
+        <form class="contato-formulario" id="forms" onsubmit="enviar(event)" aria-describedby="form-instructions">
+            <p id="form-instructions" class="sr-only">Preencha o formulário para enviar uma mensagem via WhatsApp.</p>
+            <div class="grupo-form">
+                <label for="nome" class="sr-only">Nome</label>
+                <input placeholder="Nome" class="campo-form" id="nome" data-translate-placeholder="form-name" required aria-required="true">
+            </div>
+            <div class="grupo-form">
+                <label for="mensagem" class="sr-only">Mensagem</label>
+                <textarea style="resize: none;" class="campo-form" placeholder="Digite Sua Mensagem" id="mensagem" data-translate-placeholder="form-message" required aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="botao-form" data-translate="form-submit">Enviar Mensagem</button>
+        </form>
+    </section>
+    <footer class="footer" role="contentinfo">
+        <div class="share" aria-label="Links para redes sociais">
+            <a href="https://pt-br.facebook.com/login/device-based/regular/login/" target="_blank" aria-label="Visite meu perfil no Facebook"><img class="img" width="30" height="30" src="https://img.icons8.com/ios/30/ffffff/facebook--v2.png" alt=""></a>
+            <a href="https://www.instagram.com/arthur_protazio?igsh=cXNzYzZucHlvMW92" target="_blank" aria-label="Visite meu perfil no Instagram"><img class="img" width="30" height="30" src="https://img.icons8.com/ios/30/ffffff/instagram-new--v2.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/arthur-protazio-teruel-4990a0353/" target="_blank" aria-label="Visite meu perfil no LinkedIn"><img class="img" width="30" height="30" src="https://img.icons8.com/ios/30/ffffff/linkedin-2--v1.png" alt=""></a>
+            <a href="https://github.com/httpteruel" target="_blank" aria-label="Visite meu perfil no GitHub"><img class="img" width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt=""></a>
+        </div>
+    </footer>
+    <div id="aria-alert" class="sr-only" role="alert"></div>
+    <script src="script.js"></script>
+</body>
+</html>

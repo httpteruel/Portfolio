@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primaria: #6c9fdad3;
+    --secundaria: #aa84dfcc;
+    --escuro: #596d65;
+    --maisEscuro: #3a5249ec;
+    --claro: #e2e8f0;
+    --glass-effect: rgba(255, 255, 255, 0.1);
+    --shadow-profile: rgba(255, 255, 255, 0.384);
+    --shadow-card: rgba(77, 3, 138, 0.384);
+    --shadow-form: rgba(74, 47, 146, 0.637);
+}
+
+.dark-theme {
+    --primaria: #2a2d29;
+    --secundaria: #313332dc;
+    --escuro: #121212;
+    --maisEscuro: #000;
+    --claro: #ffffff;
+    --glass-effect: rgba(0, 0, 0, 0.1);
+    --shadow-profile: rgb(0, 255, 42);
+    --shadow-card: rgb(30, 255, 0);
+    --shadow-form: rgba(0, 255, 0, 0.637);
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+.dark-theme .navegacao {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.dark-theme .sobre-caixa,
+.dark-theme .projetos-card,
+.dark-theme .contato-formulario {
+    background: rgba(0, 0, 0, 0.419);
+    border: 1px solid rgba(105, 234, 0, 0.681);
+}
+
+.dark-theme .botao-form {
+    background: linear-gradient(45deg, #00ff11, #2d2b2ba2);
+}
+
+.dark-theme .menu-link::after {
+    background: linear-gradient(90deg, var(--secundaria), var(--shadow-form));
+}
+
+body {
+    background-color: #608681c7;
+    color: var(--claro);
+}
+
+.theme-button, .lang-button {
+    margin-left: -400px;
+    border: none;
+    height: 45px;
+    width: 45px;
+    border-radius: 45px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.theme-button:hover, .lang-button:hover,
+.theme-button:focus, .lang-button:focus {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 5px 10px var(--shadow-profile);
+    outline: 2px solid var(--secundaria);
+}
+
+.navegacao {
+    position: fixed;
+    top: 0;
+    background: rgba(15, 23, 42, 0.8);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu-link:hover::after,
+.menu-link:focus::after {
+    width: 100%;
+}
+
+.menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--secundaria), var(--claro));
+    transition: width 0.5s ease;
+}
+
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    border: none;
+    animation: identifier 5s ease-in-out infinite;
+    transition: all 0.7s ease;
+}
+
+.foto-perfil:hover,
+.foto-perfil:focus {
+    box-shadow: 0 20px 30px var(--shadow-profile);
+    transform: translateY(-10px) scale(1.03);
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--claro);
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.cabecalho-subtitulo {
+    font-size: 1.5rem;
+    color: var(--claro);
+}
+
+.sobre, .projetos, .quote-section, .contato {
+    padding: 6rem 2rem;
+}
+
+.sobre-titulo {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sobre-caixa {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px solid var(--glass-effect);
+    backdrop-filter: blur(35px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sobre-paragrafo {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.projetos-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--glass-effect);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.projetos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.caixa-texto {
+    padding: 1.5rem;
+}
+
+.projetos-imagem {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.projetos-titulo, .contato-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.projetos-card:hover,
+.projetos-card:focus {
+    box-shadow: 0 10px 20px var(--shadow-card);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.projeto-paragrafo {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.25rem;
+}
+
+.projeto-info {
+    margin-bottom: 5px;
+}
+
+.quote-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#quote-text {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--claro);
+    margin-bottom: 1rem;
+    position: relative;
+    max-width: 600px;
+}
+
+#quote-text::before, #quote-text::after {
+    content: '"';
+    font-size: 2rem;
+    color: var(--secundaria);
+    position: absolute;
+}
+
+#quote-text::before {
+    top: -0.5rem;
+    left: -1rem;
+}
+
+#quote-text::after {
+    bottom: -1.5rem;
+    right: -1rem;
+}
+
+#quote-author {
+    font-size: 1.2rem;
+    color: rgba(226, 232, 240, 0.8);
+}
+
+.contato {
+    padding: 2rem 6rem;
+}
+
+.contato-formulario {
+    max-width: 600px;
+    color: var(--claro);
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-effect);
+    border-radius: 15px;
+}
+
+.campo-form {
+    width: 100%;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 7px;
+    color: var(--claro);
+    border: 1px solid var(--glass-effect);
+    outline: none;
+}
+
+.campo-form:focus {
+    border-color: var(--secundaria);
+    box-shadow: 0 0 10px rgba(70, 229, 208, 0.3);
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+}
+
+.botao-form {
+    color: var(--claro);
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.botao-form:hover,
+.botao-form:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px var(--shadow-form);
+    outline: 2px solid var(--secundaria);
+}
+
+.footer {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    text-align: center;
+    cursor: pointer;
+    height: 50px;
+    transition: all 0.5s ease;
+}
+
+.footer .img:hover,
+.footer .img:focus {
+    transform: translateY(-4px) scale(1.03);
+    transition: 0.5s ease;
+}
+
+.efeito {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.5;
+    background: radial-gradient(var(--primaria), var(--secundaria));
+}
+
+@keyframes identifier {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15%);
+    }
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    background: var(--claro);
+    color: var(--escuro);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
